@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tournaments</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2ECC71",
+                        accent: "#3498DB",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#122017",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1a2920",
+                        "neutral-gray-light": "#E5E7EB",
+                        "neutral-gray-dark": "#374151"
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.75rem",
+                        lg: "1rem",
+                        xl: "1.25rem",
+                        full: "9999px"
+                    },
+                    boxShadow: {
+                      'soft': '0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+        .theme-toggle:checked + .theme-toggle-label .theme-toggle-ball {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex min-h-screen">
+<aside class="w-64 shrink-0 bg-card-light dark:bg-card-dark border-r border-neutral-gray-light dark:border-neutral-gray-dark hidden lg:flex flex-col">
+<div class="flex items-center gap-2 h-16 px-6 border-b border-neutral-gray-light dark:border-neutral-gray-dark">
+<span class="material-symbols-outlined text-primary text-3xl">sports_tennis</span>
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">PadelScore</h1>
+</div>
+<nav class="flex-1 p-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-semibold" href="tournaments.html">
+<span class="material-symbols-outlined">emoji_events</span>
+<span>Tournaments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="players.html">
+<span class="material-symbols-outlined">groups</span>
+<span>Players</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="leaderboard.html">
+<span class="material-symbols-outlined">leaderboard</span>
+<span>Leaderboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="referees.html">
+<span class="material-symbols-outlined">timer</span>
+<span>Referees</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800 " href="my_profile.html">
+<span class="material-symbols-outlined">person</span>
+<span>My Profile</span>
+</a>
+</nav>
+
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="h-16 flex items-center justify-between px-6 border-b border-neutral-gray-light dark:border-neutral-gray-dark bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10">
+<button class="lg:hidden p-2 -ml-2">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<div class="flex-1"></div>
+<div class="flex items-center gap-4">
+
+<button>
+<img alt="User profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/a/ACg8ocJ85X-23w-o_A3dJ9dC3G_pZqg1gJ_4vG-Q-zM3E9jW=s96-c"/>
+</button>
+</div>
+</header>
+<main class="flex-1 p-4 sm:p-6 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white">Tournaments</h2>
+<a href="c"
+class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-lg shadow-soft transition-colors">
+
+                        Create Tournament
+</a>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-lg shadow-soft overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-slate-600 dark:text-slate-400">
+<thead class="text-xs text-slate-700 dark:text-slate-300 uppercase bg-slate-50 dark:bg-neutral-gray-dark/30">
+<tr>
+<th class="px-6 py-3" scope="col">Name</th>
+<th class="px-6 py-3 hidden md:table-cell" scope="col">Date</th>
+<th class="px-6 py-3 hidden lg:table-cell" scope="col">Location</th>
+<th class="px-6 py-3 hidden md:table-cell" scope="col">Category</th>
+<th class="px-6 py-3" scope="col">Status</th>
+<th class="px-6 py-3 text-right" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-card-light dark:bg-card-dark border-b border-neutral-gray-light dark:border-neutral-gray-dark hover:bg-slate-50/50 dark:hover:bg-neutral-gray-dark/20 transition-colors">
+<th class="px-6 py-4 font-medium text-slate-900 dark:text-white whitespace-nowrap" scope="row">PadelMania Open 2024</th>
+<td class="px-6 py-4 hidden md:table-cell">2024-08-15</td>
+<td class="px-6 py-4 hidden lg:table-cell">Madrid Padel Club</td>
+<td class="px-6 py-4 hidden md:table-cell">Men's Pro</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300">
+                                            Completed
+                                        </span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-neutral-gray-dark/50 transition-colors">
+<span class="material-symbols-outlined text-accent text-lg">visibility</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-neutral-gray-dark/50 transition-colors">
+<span class="material-symbols-outlined text-slate-500 text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="bg-card-light dark:bg-card-dark border-b border-neutral-gray-light dark:border-neutral-gray-dark hover:bg-slate-50/50 dark:hover:bg-neutral-gray-dark/20 transition-colors">
+<th class="px-6 py-4 font-medium text-slate-900 dark:text-white whitespace-nowrap" scope="row">Summer Slam Series</th>
+<td class="px-6 py-4 hidden md:table-cell">2024-09-01</td>
+<td class="px-6 py-4 hidden lg:table-cell">Barcelona Beach Padel</td>
+<td class="px-6 py-4 hidden md:table-cell">Mixed Doubles</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300">
+                                            Live
+                                        </span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-neutral-gray-dark/50 transition-colors">
+<span class="material-symbols-outlined text-accent text-lg">visibility</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-neutral-gray-dark/50 transition-colors">
+<span class="material-symbols-outlined text-slate-500 text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="bg-card-light dark:bg-card-dark border-b border-neutral-gray-light dark:border-neutral-gray-dark hover:bg-slate-50/50 dark:hover:bg-neutral-gray-dark/20 transition-colors">
+<th class="px-6 py-4 font-medium text-slate-900 dark:text-white whitespace-nowrap" scope="row">The Autumn Invitational</th>
+<td class="px-6 py-4 hidden md:table-cell">2024-10-20</td>
+<td class="px-6 py-4 hidden lg:table-cell">Valencia Padel Center</td>
+<td class="px-6 py-4 hidden md:table-cell">Women's Elite</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-300">
+                                            Draft
+                                        </span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-neutral-gray-dark/50 transition-colors">
+<span class="material-symbols-outlined text-accent text-lg">visibility</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-neutral-gray-dark/50 transition-colors">
+<span class="material-symbols-outlined text-slate-500 text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="bg-card-light dark:bg-card-dark border-b border-neutral-gray-light dark:border-neutral-gray-dark hover:bg-slate-50/50 dark:hover:bg-neutral-gray-dark/20 transition-colors">
+<th class="px-6 py-4 font-medium text-slate-900 dark:text-white whitespace-nowrap" scope="row">Winter Padel Fest</th>
+<td class="px-6 py-4 hidden md:table-cell">2024-12-05</td>
+<td class="px-6 py-4 hidden lg:table-cell">Seville Indoor Padel</td>
+<td class="px-6 py-4 hidden md:table-cell">Men's Amateur</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300">
+                                            Completed
+                                        </span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-neutral-gray-dark/50 transition-colors">
+<span class="material-symbols-outlined text-accent text-lg">visibility</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-neutral-gray-dark/50 transition-colors">
+<span class="material-symbols-outlined text-slate-500 text-lg">edit</span>
+</button>
+</td>
+</tr>
+<tr class="bg-card-light dark:bg-card-dark hover:bg-slate-50/50 dark:hover:bg-neutral-gray-dark/20 transition-colors">
+<th class="px-6 py-4 font-medium text-slate-900 dark:text-white whitespace-nowrap" scope="row">New Year's Challenge</th>
+<td class="px-6 py-4 hidden md:table-cell">2025-01-10</td>
+<td class="px-6 py-4 hidden lg:table-cell">Granada Padel Arena</td>
+<td class="px-6 py-4 hidden md:table-cell">Mixed Pro-Am</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-300">
+                                            Draft
+                                        </span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-neutral-gray-dark/50 transition-colors">
+<span class="material-symbols-outlined text-accent text-lg">visibility</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-neutral-gray-dark/50 transition-colors">
+<span class="material-symbols-outlined text-slate-500 text-lg">edit</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex justify-between items-center p-4 border-t border-neutral-gray-light dark:border-neutral-gray-dark">
+<span class="text-sm text-slate-500 dark:text-slate-400">Showing 1 to 5 of 20 results</span>
+<div class="inline-flex items-center -space-x-px">
+<button class="px-3 py-2 leading-tight text-slate-500 bg-white dark:bg-card-dark border border-neutral-gray-light dark:border-neutral-gray-dark rounded-l-lg hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-neutral-gray-dark/50 dark:hover:text-white">Previous</button>
+<button class="px-3 py-2 leading-tight text-slate-500 bg-white dark:bg-card-dark border border-neutral-gray-light dark:border-neutral-gray-dark hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-neutral-gray-dark/50 dark:hover:text-white">1</button>
+<button class="px-3 py-2 leading-tight text-slate-500 bg-white dark:bg-card-dark border border-neutral-gray-light dark:border-neutral-gray-dark hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-neutral-gray-dark/50 dark:hover:text-white">2</button>
+<button class="px-3 py-2 leading-tight text-slate-500 bg-white dark:bg-card-dark border border-neutral-gray-light dark:border-neutral-gray-dark rounded-r-lg hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-neutral-gray-dark/50 dark:hover:text-white">Next</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        themeToggle.checked = true;
+    } else {
+        document.documentElement.classList.remove('dark');
+        themeToggle.checked = false;
+    }
+    themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
+
+</body></html>

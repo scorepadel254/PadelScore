@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Leaderboard</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2ECC71", // Emerald Green
+                        "accent": "#3498DB", // Blue
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#122017",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1a2a20",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#2d3a33",
+                        "text-light": "#1F2937",
+                        "text-dark": "#E5E7EB",
+                        "text-muted-light": "#6B7280",
+                        "text-muted-dark": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'sm': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+                        'DEFAULT': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+                        'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+        .dark .dark\:bg-background-dark {
+             background-color: #122017;
+        }
+        .dark .dark\:bg-card-dark {
+             background-color: #1a2a20;
+        }
+        .dark .dark\:border-border-dark {
+            border-color: #2d3a33;
+        }
+        .dark .dark\:text-text-dark {
+            color: #E5E7EB;
+        }
+         .dark .dark\:text-white {
+            color: #ffffff;
+        }
+        .dark .dark\:hover\:bg-slate-800\/50:hover {
+            background-color: rgba(30, 41, 59, 0.5);
+        }
+        .dark .dark\:bg-primary\/20 {
+            background-color: rgba(46, 204, 113, 0.2);
+        }
+        .dark .dark\:text-slate-200 {
+            color: #E5E7EB;
+        }
+        .dark .dark\:text-slate-400 {
+            color: #9CA3AF;
+        }
+        .dark .dark\:bg-black\/20 {
+            background-color: rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 shrink-0 bg-card-light dark:bg-card-dark border-r border-border-light dark:border-border-dark hidden lg:flex flex-col">
+<div class="flex items-center gap-2 h-16 px-6 border-b border-border-light dark:border-border-dark">
+
+<h1 class="text-lg font-bold text-text-light dark:text-white">PadelScore</h1>
+</div>
+<nav class="flex-1 p-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex gap-3 px-4 py-2 " href="tournaments.html">
+<span class="material-symbols-outlined">emoji_events</span>
+<span>Tournaments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 " href="players.html">
+<span class="material-symbols-outlined">groups</span>
+<span>Players</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-semibold" href="leaderboard.html">
+<span class="material-symbols-outlined">leaderboard</span>
+<span>Leaderboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="referees.html">
+<span class="material-symbols-outlined">timer</span>
+<span>Referees</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="my_profile.html">
+<span class="material-symbols-outlined">person</span>
+<span>My Profile</span>
+</a>
+</nav>
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="h-16 flex items-center justify-between px-6 border-b border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark sticky top-0 z-10">
+<button class="lg:hidden text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex-1"></div>
+<div class="flex items-center gap-4">
+
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-text-light dark:text-text-dark hover:bg-gray-100 dark:hover:bg-slate-800/50">
+
+<button>
+<img alt="User profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQY-MCPpymNw24APuiBhRgnX3YPyuIWy5B1K49Yuqz3Cr9BMB2M6Na2h48wRz-STP17otQODe2-KyYKd4CJJTdwzZ_3WEOc1gTxzWg4tbMT2PA2Rtsl3E3yUVkxYB0OKt-EOkl4Y0zbdgNlHHVT3pvHN3Rc9iizlWzaVAM-Qjg77Emsd-nQu6lUzMgSXWMyN76aIbpv7AQhfdpYFRPM5M-dpIoQ3RkPovqZQ3pyH9QyimwJl7IzKZQ3pB2_gjLn_wPhhdiyfFz2RVQ"/>
+</button>
+</div>
+</header>
+<main class="flex-1 p-6 bg-background-light dark:bg-black/20">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+<h2 class="text-3xl font-bold text-text-light dark:text-white mb-4 md:mb-0">Player and Team Rankings</h2>
+<div class="flex items-center gap-2">
+<!-- Export Button -->
+<a id="export-btn" 
+   class="px-4 py-2 bg-primary text-white rounded-lg shadow-sm hover:bg-emerald-600 transition-colors duration-200 flex items-center gap-2 cursor-pointer">
+  <span class="material-symbols-outlined text-base">download</span>
+  Export
+</a>
+
+<!-- Modal Overlay (hidden by default) -->
+<div id="export-modal" class="hidden fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50">
+  <!-- Modal Content -->
+  <div class="w-full max-w-md p-6 bg-white dark:bg-slate-900 rounded-xl shadow-lg">
+    <div class="flex items-center justify-between border-b pb-3 mb-4">
+      <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200">Export Ready</h2>
+      <button id="close-modal" class="text-gray-500 hover:text-gray-800 dark:hover:text-gray-300">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+
+    <!-- File Preview -->
+    <div class="flex items-center gap-3 mb-6">
+      <span class="material-symbols-outlined text-emerald-600">description</span>
+      <span class="text-sm font-medium text-gray-700 dark:text-gray-200">
+        player_leaderboard.pdf
+      </span>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex justify-end gap-3">
+      <a href="Player_leaderboard.pdf" download
+         class="flex items-center gap-1 px-4 py-2 text-sm font-semibold text-white bg-emerald-600 rounded-md hover:bg-emerald-700 transition-colors">
+        <span class="material-symbols-outlined text-sm">download</span>
+        Download
+      </a>
+      <button id="cancel-export"
+        class="flex items-center gap-1 px-4 py-2 text-sm font-semibold text-gray-600 border border-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+        <span class="material-symbols-outlined text-sm">close</span>
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const exportBtn = document.getElementById("export-btn");
+  const modal = document.getElementById("export-modal");
+  const closeBtn = document.getElementById("close-modal");
+  const cancelBtn = document.getElementById("cancel-export");
+
+  exportBtn.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  cancelBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  // Close when clicking outside modal content
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+</script>
+
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-4 rounded-lg shadow-sm mb-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div>
+<label class="block text-sm font-medium text-text-muted-light dark:text-text-muted-dark mb-1" for="category">Category</label>
+<select class="w-full bg-background-light dark:bg-background-dark border-border-light dark:border-border-dark rounded-md shadow-sm focus:ring-primary focus:border-primary" id="category" name="category">
+<option>All Categories</option>
+<option>Men's Singles</option>
+<option>Women's Singles</option>
+<option>Men's Doubles</option>
+<option>Women's Doubles</option>
+<option>Mixed Doubles</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-muted-light dark:text-text-muted-dark mb-1" for="tournament">Tournament</label>
+<select class="w-full bg-background-light dark:bg-background-dark border-border-light dark:border-border-dark rounded-md shadow-sm focus:ring-primary focus:border-primary" id="tournament" name="tournament">
+<option>All Tournaments</option>
+<option>Spring Open 2023</option>
+<option>Summer Slam 2023</option>
+<option>Autumn Cup 2023</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-muted-light dark:text-text-muted-dark mb-1" for="timeframe">Timeframe</label>
+<select class="w-full bg-background-light dark:bg-background-dark border-border-light dark:border-border-dark rounded-md shadow-sm focus:ring-primary focus:border-primary" id="timeframe" name="timeframe">
+<option>All Time</option>
+<option>Last 30 Days</option>
+<option>Last 90 Days</option>
+<option>This Year</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-muted-light dark:text-text-muted-dark mb-1" for="search">Search Player/Team</label>
+<input class="w-full bg-background-light dark:bg-background-dark border-border-light dark:border-border-dark rounded-md shadow-sm focus:ring-primary focus:border-primary" id="search" name="search" placeholder="e.g. John Doe" type="text"/>
+</div>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-lg shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left">
+<thead class="bg-gray-50 dark:bg-slate-800/50 text-xs uppercase text-text-muted-light dark:text-text-muted-dark">
+<tr>
+<th class="px-6 py-3 font-medium" scope="col">Rank</th>
+<th class="px-6 py-3 font-medium" scope="col">Player / Team</th>
+<th class="px-6 py-3 font-medium text-center" scope="col">Points</th>
+<th class="px-6 py-3 font-medium text-center" scope="col">Matches Played</th>
+<th class="px-6 py-3 font-medium text-center" scope="col">Wins</th>
+<th class="px-6 py-3 font-medium text-center" scope="col">Win %</th>
+<th class="px-6 py-3 font-medium" scope="col">Form</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-light dark:divide-border-dark">
+<tr>
+<td class="px-6 py-4 font-bold text-accent">1</td>
+<td class="px-6 py-4 font-medium text-text-light dark:text-white">Liam Harper &amp; Noah Foster</td>
+<td class="px-6 py-4 text-center font-semibold text-primary">2850</td>
+<td class="px-6 py-4 text-center">35</td>
+<td class="px-6 py-4 text-center">32</td>
+<td class="px-6 py-4 text-center">91.4%</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1">
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-red-500" title="Loss"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-accent">2</td>
+<td class="px-6 py-4 font-medium text-text-light dark:text-white">Olivia Bennett</td>
+<td class="px-6 py-4 text-center font-semibold text-primary">1450</td>
+<td class="px-6 py-4 text-center">28</td>
+<td class="px-6 py-4 text-center">25</td>
+<td class="px-6 py-4 text-center">89.3%</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1">
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-red-500" title="Loss"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-accent">3</td>
+<td class="px-6 py-4 font-medium text-text-light dark:text-white">Ava Coleman &amp; Ethan Hayes</td>
+<td class="px-6 py-4 text-center font-semibold text-primary">2650</td>
+<td class="px-6 py-4 text-center">32</td>
+<td class="px-6 py-4 text-center">28</td>
+<td class="px-6 py-4 text-center">87.5%</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1">
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-red-500" title="Loss"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-accent">4</td>
+<td class="px-6 py-4 font-medium text-text-light dark:text-white">David Lee</td>
+<td class="px-6 py-4 text-center font-semibold text-primary">1280</td>
+<td class="px-6 py-4 text-center">25</td>
+<td class="px-6 py-4 text-center">20</td>
+<td class="px-6 py-4 text-center">80.0%</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1">
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-red-500" title="Loss"></span>
+<span class="w-4 h-4 rounded-full bg-red-500" title="Loss"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-accent">5</td>
+<td class="px-6 py-4 font-medium text-text-light dark:text-white">Sophia Rodriguez</td>
+<td class="px-6 py-4 text-center font-semibold text-primary">1250</td>
+<td class="px-6 py-4 text-center">26</td>
+<td class="px-6 py-4 text-center">20</td>
+<td class="px-6 py-4 text-center">76.9%</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1">
+<span class="w-4 h-4 rounded-full bg-red-500" title="Loss"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-red-500" title="Loss"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+</div>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 font-bold text-accent">6</td>
+<td class="px-6 py-4 font-medium text-text-light dark:text-white">Team Alpha</td>
+<td class="px-6 py-4 text-center font-semibold text-primary">2400</td>
+<td class="px-6 py-4 text-center">30</td>
+<td class="px-6 py-4 text-center">22</td>
+<td class="px-6 py-4 text-center">73.3%</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-1">
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+<span class="w-4 h-4 rounded-full bg-red-500" title="Loss"></span>
+<span class="w-4 h-4 rounded-full bg-red-500" title="Loss"></span>
+<span class="w-4 h-4 rounded-full bg-emerald-500" title="Win"></span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-border-light dark:border-border-dark flex items-center justify-between">
+<span id="pagination-info" class="text-sm text-text-muted-light dark:text-text-muted-dark">
+  Showing 1 to 6 of 245 entries
+</span>
+
+<div id="pagination" class="inline-flex rounded-md shadow-sm mt-2">
+  <button id="prev-page" class="px-3 py-2 text-sm font-medium text-text-light dark:text-text-dark bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark rounded-l-lg hover:bg-gray-100 dark:hover:bg-slate-800/50">
+    Previous
+  </button>
+  
+  <button data-page="1" class="page-btn px-3 py-2 text-sm font-medium text-text-light dark:text-text-dark bg-card-light dark:bg-card-dark border-t border-b border-border-light dark:border-border-dark hover:bg-gray-100 dark:hover:bg-slate-800/50">1</button>
+  
+  <button data-page="2" class="page-btn px-3 py-2 text-sm font-medium text-white bg-primary border-t border-b border-primary">2</button>
+  
+  <button data-page="3" class="page-btn px-3 py-2 text-sm font-medium text-text-light dark:text-text-dark bg-card-light dark:bg-card-dark border-t border-b border-border-light dark:border-border-dark hover:bg-gray-100 dark:hover:bg-slate-800/50">3</button>
+  
+  <button id="next-page" class="px-3 py-2 text-sm font-medium text-text-light dark:text-text-dark bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark rounded-r-lg hover:bg-gray-100 dark:hover:bg-slate-800/50">
+    Next
+  </button>
+</div>
+
+<script>
+  let currentPage = 2;  // default active page
+  const totalEntries = 245;
+  const entriesPerPage = 6;
+  const totalPages = Math.ceil(totalEntries / entriesPerPage);
+
+  const paginationInfo = document.getElementById("pagination-info");
+  const pageButtons = document.querySelectorAll(".page-btn");
+  const prevBtn = document.getElementById("prev-page");
+  const nextBtn = document.getElementById("next-page");
+
+  function updateUI() {
+    // update info text
+    const start = (currentPage - 1) * entriesPerPage + 1;
+    const end = Math.min(currentPage * entriesPerPage, totalEntries);
+    paginationInfo.textContent = `Showing ${start} to ${end} of ${totalEntries} entries`;
+
+    // update button styles
+    pageButtons.forEach(btn => {
+      if (parseInt(btn.dataset.page) === currentPage) {
+        btn.classList.add("text-white", "bg-primary", "border-primary");
+        btn.classList.remove("text-text-light", "bg-card-light", "dark:bg-card-dark");
+      } else {
+        btn.classList.remove("text-white", "bg-primary", "border-primary");
+        btn.classList.add("text-text-light", "bg-card-light", "dark:bg-card-dark");
+      }
+    });
+
+    // disable prev/next at edges
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+  }
+
+  // page number clicks
+  pageButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      currentPage = parseInt(btn.dataset.page);
+      updateUI();
+      // load data here, e.g. fetchData(currentPage);
+    });
+  });
+
+  // previous
+  prevBtn.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage--;
+      updateUI();
+    }
+  });
+
+  // next
+  nextBtn.addEventListener("click", () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      updateUI();
+    }
+  });
+
+  updateUI(); // init
+</script>
+
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    themeToggleBtn.addEventListener('click', function() {
+        // if set via local storage previously
+        if (localStorage.getItem('color-theme')) {
+            if (localStorage.getItem('color-theme') === 'light') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            }
+        // if NOT set via local storage previously
+        } else {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        }
+    });
+</script>
+
+</body></html>

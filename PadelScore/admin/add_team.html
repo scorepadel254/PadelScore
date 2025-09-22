@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Team</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#2ECC71",
+                        accent: "#3498DB",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#121212",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E1E1E",
+                        "text-light": "#111827",
+                        "text-dark": "#E5E7EB",
+                        "gray-neutral": "#9CA3AF"
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "0.75rem",
+                        xl: "1rem",
+                        full: "9999px"
+                    },
+                    boxShadow: {
+                        soft: '0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 shrink-0 bg-card-light dark:bg-card-dark border-r border-slate-200 dark:border-slate-800 hidden lg:flex flex-col">
+<div class="flex items-center gap-2 h-16 px-6">
+<span class="material-symbols-outlined text-primary text-3xl">
+                sports_tennis
+            </span>
+<h1 class="text-xl font-bold text-text-light dark:text-text-dark">PadelScore</h1>
+</div>
+<nav class="flex-1 p-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2" href="index.html">
+<span>Dashboard</span>
+</a>
+<a class="flex gap-3 px-4 py-2 " href="tournaments.html">
+<span>Tournaments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-semibold" href="players.html">
+<span>Players</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="leaderboard.html">
+<span>Leaderboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="referees.html">
+<span>Referees</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="my_profile.html">
+<span>My Profile</span>
+</a>
+</nav>
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="h-16 flex items-center justify-between px-6 border-b border-slate-200 dark:border-slate-800 bg-card-light dark:bg-card-dark sticky top-0 z-10">
+<button class="lg:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex-1"></div>
+<div class="flex items-center gap-4">
+
+
+<img alt="User profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQY-MCPpymNw24APuiBhRgnX3YPyuIWy5B1K49Yuqz3Cr9BMB2M6Na2h48wRz-STP17otQODe2-KyYKd4CJJTdwzZ_3WEOc1gTxzWg4tbMT2PA2Rtsl3E3yUVkxYB0OKt-EOkl4Y0zbdgNlHHVT3pvHN3Rc9iizlWzaVAM-Qjg77Emsd-nQu6lUzMgSXWMyN76aIbpv7AQhfdpYFRPM5M-dpIoQ3RkPovqZQ3pyH9QyimwJl7IzKZQ3pB2_gjLn_wPhhdiyfFz2RVQ"/>
+</button>
+</div>
+</header>
+<main class="flex-1 p-6 bg-background-light dark:bg-background-dark">
+<div class="max-w-4xl mx-auto">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-3xl font-bold text-text-light dark:text-text-dark">Add New Team</h2>
+<a class="flex items-center gap-2 text-sm text-accent hover:underline" href="players.html">
+
+                        Back to Teams
+                    </a>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 sm:p-8 rounded-xl shadow-soft">
+<form action="#" class="space-y-6" method="POST">
+<div>
+<label class="block text-sm font-medium text-gray-neutral dark:text-gray-400" for="team-name">Team Name</label>
+<div class="mt-1">
+<input class="block w-full rounded-md border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="team-name" name="team-name" placeholder="e.g., The Padel Pros" type="text"/>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-medium leading-6 text-text-light dark:text-text-dark">Team Members</h3>
+<p class="mt-1 text-sm text-gray-neutral dark:text-gray-400">Select two players for this team. You can search for existing players or add new ones.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-4 p-4 border border-slate-200 dark:border-slate-700 rounded-lg">
+<h4 class="font-semibold">Player 1</h4>
+<div>
+<label class="block text-sm font-medium text-gray-neutral dark:text-gray-400" for="player1">Select Existing Player</label>
+<div class="mt-1 flex rounded-md shadow-sm">
+<span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-gray-neutral dark:text-gray-400 sm:text-sm">
+<span class="material-symbols-outlined text-base">search</span>
+</span>
+<select class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary sm:text-sm" id="player1" name="player1">
+<option>Select a player...</option>
+<option>Liam Harper</option>
+<option>Olivia Bennett</option>
+<option>Noah Foster</option>
+</select>
+</div>
+</div>
+<div class="relative">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-300 dark:border-slate-700"></div>
+</div>
+<div class="relative flex justify-center">
+<span class="bg-card-light dark:bg-card-dark px-2 text-sm text-gray-neutral dark:text-gray-400">OR</span>
+</div>
+</div>
+<a href="add_player.html"
+class="w-full flex justify-center items-center gap-2 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-accent hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent" href="add_player.html" type="button">
+
+ Create New Player
+</a>
+</div>
+<div class="space-y-4 p-4 border border-slate-200 dark:border-slate-700 rounded-lg">
+<h4 class="font-semibold">Player 2</h4>
+<div>
+<label class="block text-sm font-medium text-gray-neutral dark:text-gray-400" for="player2">Select Existing Player</label>
+<div class="mt-1 flex rounded-md shadow-sm">
+<span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-gray-neutral dark:text-gray-400 sm:text-sm">
+<span class="material-symbols-outlined text-base">search</span>
+</span>
+<select class="block w-full min-w-0 flex-1 rounded-none rounded-r-md border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary sm:text-sm" id="player2" name="player2">
+<option>Select a player...</option>
+<option>Ava Coleman</option>
+<option>Ethan Hayes</option>
+<option>Sophia Rodriguez</option>
+</select>
+</div>
+</div>
+<div class="relative">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-300 dark:border-slate-700"></div>
+</div>
+<div class="relative flex justify-center">
+<span class="bg-card-light dark:bg-card-dark px-2 text-sm text-gray-neutral dark:text-gray-400">OR</span>
+</div>
+</div>
+<a href="add_player.html"
+class="w-full flex justify-center items-center gap-2 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-accent hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent" href="add_player.html" type="button">
+
+ Create New Player
+</a>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-neutral dark:text-gray-400" for="team-notes">Additional Information</label>
+<div class="mt-1">
+<textarea class="block w-full rounded-md border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="team-notes" name="team-notes" placeholder="Any other relevant details about the team..." rows="3"></textarea>
+</div>
+</div>
+<div class="flex items-center justify-end gap-4 pt-4">
+<a href="players.html"
+class="rounded-md py-2 px-4 text-sm font-medium text-gray-neutral dark:text-gray-400 hover:bg-slate-100 dark:hover:bg-slate-800/50" type="button">
+                                Cancel
+                            </a>
+<button class="inline-flex justify-center items-center gap-2 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+
+                                Save Team
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlEl = document.documentElement;
+    themeToggle.addEventListener('click', () => {
+        htmlEl.classList.toggle('dark');
+    });
+</script>
+
+</body></html>

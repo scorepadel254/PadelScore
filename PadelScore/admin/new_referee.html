@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Referees </title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2ECC71", // Emerald green
+                        "secondary": "#3498DB", // Blue accent
+                        "background-light": "#F7F9FC",
+                        "background-dark": "#1A1C1E",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#242629",
+                        "text-light": "#1A1C1E",
+                        "text-dark": "#E1E3E6",
+                        "border-light": "#E1E3E6",
+                        "border-dark": "#363A3F",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+        .dark .material-symbols-outlined {
+             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 shrink-0 bg-card-light dark:bg-card-dark border-r border-border-light dark:border-border-dark hidden lg:flex flex-col">
+<div class="flex items-center gap-2 h-16 px-6">
+<span class="material-symbols-outlined text-primary text-3xl">
+                sports_tennis
+            </span>
+<h1 class="text-xl font-bold text-text-light dark:text-text-dark">PadelScore</h1>
+</div>
+<nav class="flex-1 p-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="tournaments.html">
+<span class="material-symbols-outlined">emoji_events</span>
+<span>Tournaments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="players.html">
+<span class="material-symbols-outlined">groups</span>
+<span>Players</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="leaderboard.html">
+<span class="material-symbols-outlined">leaderboard</span>
+<span>Leaderboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-semibold" href="referees.html">
+<span class="material-symbols-outlined">timer</span>
+<span>Referees</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="my_profile.html">
+<span class="material-symbols-outlined">person</span>
+<span>My Profile</span>
+</a>
+
+</a>
+</nav>
+<div class="p-4">
+</div>
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="h-16 flex items-center justify-between px-4 sm:px-6 border-b border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark sticky top-0 z-10">
+<button class="lg:hidden p-2 -ml-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex-1"></div>
+<div class="flex items-center gap-4">
+
+<button>
+<img alt="User profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQY-MCPpymNw24APuiBhRgnX3YPyuIWy5B1K49Yuqz3Cr9BMB2M6Na2h48wRz-STP17otQODe2-KyYKd4CJJTdwzZ_3WEOc1gTxzWg4tbMT2PA2Rtsl3E3yUVkxYB0OKt-EOkl4Y0zbdgNlHHVT3pvHN3Rc9iizlWzaVAM-Qjg77Emsd-nQu6lUzMgSXWMyN76aIbpv7AQhfdpYFRPM5M-dpIoQ3RkPovqZQ3pyH9QyimwJl7IzKZQ3pB2_gjLn_wPhhdiyfFz2RVQ"/>
+</button>
+</div>
+</header>
+<div>
+<div class="flex flex-col max-w-lg w-full mx-auto p-6 bg-card-light dark:bg-card-dark rounded-xl shadow-soft">
+  <h2 class="text-2xl font-bold mb-6 text-text-light dark:text-text-dark">Add New User</h2>
+
+  <!-- Name -->
+  <div class="mb-4">
+    <label class="block text-sm font-medium mb-1 text-text-light dark:text-text-dark">Name</label>
+    <input 
+      type="text"
+      placeholder="Enter user's full name"
+      class="w-full h-12 px-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-background-dark text-text-light dark:text-text-dark placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+    />
+  </div>
+
+  <!-- Email -->
+  <div class="mb-4">
+    <label class="block text-sm font-medium mb-1 text-text-light dark:text-text-dark">Email</label>
+    <input 
+      type="email"
+      placeholder="Enter user's email address"
+      class="w-full h-12 px-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-background-dark text-text-light dark:text-text-dark placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+    />
+  </div>
+
+  <!-- Role -->
+  <div class="mb-4">
+    <label class="block text-sm font-medium mb-1 text-text-light dark:text-text-dark">Role</label>
+    <select 
+      class="w-full h-12 px-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-background-dark text-text-light dark:text-text-dark focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+    >
+      <option value="" disabled selected>Select a role</option>
+      <option value="referee">Referee</option>
+      <option value="admin">Admin</option>
+      <option value="manager">Manager</option>
+    </select>
+  </div>
+
+  <!-- Password -->
+  <div class="mb-4">
+    <label class="block text-sm font-medium mb-1 text-text-light dark:text-text-dark">Initial Password</label>
+    <input 
+      type="password"
+      placeholder="Set initial password"
+      class="w-full h-12 px-3 rounded-lg border border-border-light dark:border-border-dark bg-white dark:bg-background-dark text-text-light dark:text-text-dark placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
+    />
+  </div>
+
+  <!-- Permissions -->
+  <div class="mb-4 space-y-2">
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="checkbox" class="h-4 w-4 rounded text-primary focus:ring-primary border-border-light dark:border-border-dark" />
+      <span class="text-sm text-text-light dark:text-text-dark">Assign permissions</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+      <input type="checkbox" class="h-4 w-4 rounded text-primary focus:ring-primary border-border-light dark:border-border-dark" />
+      <span class="text-sm text-text-light dark:text-text-dark">Assign Referee role</span>
+    </label>
+  </div>
+
+  <!-- Submit -->
+   
+  <div class="flex justify-end gap-3">
+  <!-- Cancel link -->
+  <a 
+    href="referees.html" 
+    class="px-6 py-2 rounded-lg font-semibold text-text-light dark:text-text-dark hover:underline"
+  >
+    Cancel
+  </a>
+    <button 
+      class="px-6 py-2 bg-primary text-white rounded-lg font-semibold shadow-soft hover:bg-emerald-600 transition-colors"
+    >
+      Add User
+    </button>
+  
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>

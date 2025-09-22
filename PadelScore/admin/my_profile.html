@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<title>My Profile</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#38e07b",
+            "background-light": "#f6f8f7",
+            "background-dark": "#122017",
+            "surface-light": "#ffffff",
+            "surface-dark": "#1a2c21",
+            "muted-light": "#6b7280",
+            "muted-dark": "#9ca3af",
+            "border-light": "#e5e7eb",
+            "border-dark": "#374151",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-muted-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 flex-shrink-0 bg-surface-light dark:bg-surface-dark border-r border-border-light dark:border-border-dark hidden lg:flex flex-col">
+<div class="flex items-center gap-2 h-16 px-6">
+<span class="material-symbols-outlined text-primary text-3xl">
+                sports_tennis
+            </span>
+<h1 class="text-xl font-bold text-text-light dark:text-text-dark">PadelScore</h1>
+</div>
+<nav class="flex-1 p-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="tournaments.html">
+<span class="material-symbols-outlined">emoji_events</span>
+<span>Tournaments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="players.html">
+<span class="material-symbols-outlined">groups</span>
+<span>Players</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="leaderboard.html">
+<span class="material-symbols-outlined">leaderboard</span>
+<span>Leaderboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 " href="referees.html">
+<span class="material-symbols-outlined">timer</span>
+<span>Referees</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-semibold" href="my_profile.html">
+<span class="material-symbols-outlined">person</span>
+<span>My Profile</span>
+</a>
+<div class="px-4 py-6 space-y-2 border-t border-border-light dark:border-border-dark">
+
+        
+</div>
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="flex items-center justify-between h-16 px-6 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark">
+<button class="lg:hidden text-gray-600 dark:text-muted-dark">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex-1"></div>
+<div class="flex items-center space-x-4">
+<img alt="Admin avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYqMTGOXCsdTM9veutE6thTPrpzZ4npbBDoL0gB0rRFO8R4iAlAc3WOd_szo0OTY7iHile25L8MYmeGsZIpJjxXgkgh7dFUf-7nWHQGtoy9EsqDJTLB5TEuzD7vdSMZbJT2fa7O2UAioeDugwX9O40qPrXWfcr_T1Do94HjSOOGUQYo4G88sXgCjZtg2IexGA_MG63OyRBv3KcuEHM29-KdNos5nqgDilYGM-dGO24wyA4nMSjabpd8G4jcCR-8HdX1O1mOPZUzjB2"/>
+</div>
+</header>
+<main class="flex-1 p-6 md:p-8">
+<h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">Profile</h2>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<div class="xl:col-span-1 bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-md">
+<div class="flex flex-col items-center">
+<img alt="Admin avatar" class="w-32 h-32 rounded-full mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQogAeqa2dupzBUt91aL8dXOUiFsBo_qdk2ZJ_SXgTNUzi122AUkST7RTtU2iOV5xJ3y-YX_PUgfG4JR9cww_5IiGFzhQT6KNSXJXX6SekA99oDHlWW9oeGVq3wLSVXfVhwwS7rk4SUaSSAjHqiYxddFxjvT71N6CX8CTTgjkTSF5ypbgptkkaX-63rgfc4UdE_Ap5rbDN9Ke71xc_3ATqF2JOjezWNtN9yc3G2XDh41B9komWrncxzyLhSJMte_tRpr3CGsCVb2Vs"/>
+<h3 class="text-xl font-bold text-gray-800 dark:text-white">David Ndivo</h3>
+<p class="text-muted-light dark:text-muted-dark">Super Admin</p>
+<p class="text-sm text-muted-light dark:text-muted-dark mt-1">Joined 2 years ago</p>
+</div>
+</div>
+<div class="xl:col-span-2 bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-md">
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-6">Account Information</h3>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-muted-dark" for="name">Name</label>
+<input class="mt-1 block w-full rounded-DEFAULT border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary text-gray-800 dark:text-white" id="name" type="text" value="David Ndivo"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-muted-dark" for="email">Email</label>
+<input class="mt-1 block w-full rounded-DEFAULT border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary text-gray-800 dark:text-white" id="email" type="email" value="David@irishmedia.co.ke"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-muted-dark" for="phone">Phone</label>
+<input class="mt-1 block w-full rounded-DEFAULT border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary text-gray-800 dark:text-white" id="phone" type="tel" value="+254 721 530 886"/>
+</div>
+</form>
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mt-8 mb-6">Security</h3>
+<button class="px-4 py-2 bg-primary/20 dark:bg-primary/30 text-primary font-semibold rounded-DEFAULT hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">
+              Change Password
+            </button>
+<div class="mt-8 pt-6 border-t border-border-light dark:border-border-dark flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+<button class="w-full sm:w-auto px-6 py-3 bg-primary text-black font-bold rounded-DEFAULT hover:opacity-90 transition-opacity">
+                Edit Profile
+              </button>
+<button class="w-full sm:w-auto px-6 py-3 bg-transparent border border-border-light dark:border-border-dark text-gray-700 dark:text-muted-dark hover:bg-primary/10 rounded-DEFAULT transition-colors">
+                Log Out
+              </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

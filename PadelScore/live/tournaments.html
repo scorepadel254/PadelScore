@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PadelScore - Live Matches</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#20df6c",
+              "background-light": "#f6f8f7",
+              "background-dark": "#112117",
+            },
+            fontFamily: {
+              "display": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+                'glow-primary': '0 0 15px 5px rgba(32, 223, 108, 0.4)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .glow {
+        box-shadow: 0 0 15px 5px rgba(220, 38, 38, 0.5);
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="min-h-screen w-full flex flex-col">
+<header class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10 border-b border-white/10 dark:border-white/10 px-4 sm:px-6">
+<div class="mx-auto max-w-5xl flex items-center justify-between h-16">
+<div class="flex items-center gap-2">
+
+<h1 class="text-xl font-bold text-black dark:text-white">PadelScore</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-white/10">
+<svg class="text-black dark:text-white" fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="mx-auto max-w-5xl px-4 sm:px-6 py-8">
+<div class="mb-6">
+<div class="border-b border-white/10 flex space-x-4">
+<button class="relative py-3 px-1 text-sm font-bold text-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-1 after:bg-primary">Live</button>
+<button class="py-3 px-1 text-sm font-bold text-white/50 hover:text-white/80">Upcoming</button>
+<button class="py-3 px-1 text-sm font-bold text-white/50 hover:text-white/80">Completed</button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-white/5 dark:bg-black/20 rounded-lg shadow-lg overflow-hidden">
+<div class="p-4">
+<div class="flex justify-between items-start mb-3">
+<div>
+<p class="text-sm font-bold text-white">WPT Madrid Master</p>
+<p class="text-xs text-white/60">Final</p>
+</div>
+<div class="flex items-center gap-2 text-sm font-bold text-red-500">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+</span>
+                    LIVE
+                  </div>
+</div>
+<div class="grid grid-cols-3 items-center gap-4">
+<div class="col-span-1 flex flex-col items-start gap-1">
+<p class="text-sm font-medium text-white">Lebron / Galan</p>
+<p class="text-sm font-medium text-white/60">Coello / Tapia</p>
+</div>
+<div class="col-span-2 grid grid-cols-4 items-center text-center">
+<div class="flex flex-col">
+<span class="font-black text-2xl text-white">6</span>
+<span class="font-black text-2xl text-white/60">4</span>
+</div>
+<div class="flex flex-col">
+<span class="font-black text-2xl text-primary">7</span>
+<span class="font-black text-2xl text-white/60">5</span>
+</div>
+<div class="flex flex-col">
+<span class="font-black text-2xl text-white">-</span>
+<span class="font-black text-2xl text-white/60">-</span>
+</div>
+<div class="flex flex-col items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-primary mb-2"></div>
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white/5 dark:bg-black/20 px-4 py-2 text-xs text-white/60 font-medium">
+                Court 3
+              </div>
+</div>
+<div class="bg-white/5 dark:bg-black/20 rounded-lg shadow-lg overflow-hidden">
+<div class="p-4">
+<div class="flex justify-between items-start mb-3">
+<div>
+<p class="text-sm font-bold text-white">Premier Padel Rome</p>
+<p class="text-xs text-white/60">Quarterfinal</p>
+</div>
+<div class="flex items-center gap-2 text-sm font-bold text-red-500">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+</span>
+                    LIVE
+                  </div>
+</div>
+<div class="grid grid-cols-3 items-center gap-4">
+<div class="col-span-1 flex flex-col items-start gap-1">
+<p class="text-sm font-medium text-white">Navarro / Di Nenno</p>
+<p class="text-sm font-medium text-white/60">Stupaczuk / Di Nenno</p>
+</div>
+<div class="col-span-2 grid grid-cols-4 items-center text-center">
+<div class="flex flex-col">
+<span class="font-black text-2xl text-white">3</span>
+<span class="font-black text-2xl text-white/60">6</span>
+</div>
+<div class="flex flex-col">
+<span class="font-black text-2xl text-white">6</span>
+<span class="font-black text-2xl text-white/60">2</span>
+</div>
+<div class="flex flex-col">
+<span class="font-black text-2xl text-primary">1</span>
+<span class="font-black text-2xl text-white/60">1</span>
+</div>
+<div class="flex flex-col items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-transparent mb-2"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white/5 dark:bg-black/20 px-4 py-2 text-xs text-white/60 font-medium">
+                Court 1
+              </div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<title>PadelScore Referee Login</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#36e27b",
+            "background-light": "#f6f8f7",
+            "background-dark": "#112117",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<main class="flex-grow flex items-center justify-center p-4 sm:p-6">
+<div class="w-full max-w-md mx-auto">
+<div class="text-center mb-8">
+  <span class="material-symbols-outlined text-primary text-3xl">
+                sports_tennis
+            </span>
+<h1 class="text-4xl font-bold text-gray-900 dark:text-white">PadelScore</h1>
+<p class="text-gray-600 dark:text-gray-400 mt-2">Referee Portal</p>
+</div>
+<div class="space-y-6" id="login-section">
+<div>
+
+</div>
+<form class="space-y-4">
+<div>
+<label class="sr-only" for="username">Username or Code</label>
+<input class="w-full h-14 px-4 bg-gray-100 dark:bg-gray-800 border-2 border-transparent focus:border-primary focus:ring-0 rounded-lg text-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" id="username" name="username" placeholder="Username or Code" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="password">Password</label>
+<input class="w-full h-14 px-4 bg-gray-100 dark:bg-gray-800 border-2 border-transparent focus:border-primary focus:ring-0 rounded-lg text-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" id="password" name="password" placeholder="Password" type="password"/>
+</div>
+<button class="w-full bg-primary text-background-dark font-bold py-4 px-4 rounded-full text-lg hover:opacity-90 transition-opacity" id="login-button" type="button">Login</button>
+<div class="text-center">
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#">Forgot Password?</a>
+</div>
+</form>
+</div>
+<div class="hidden mt-12" id="tournaments-section">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Assigned Tournaments</h2>
+<button class="text-sm font-medium text-primary hover:underline" id="logout-button">Logout</button>
+</div>
+<div class="space-y-4">
+<div class="bg-gray-100 dark:bg-gray-800/50 p-4 rounded-lg flex items-center gap-4 cursor-pointer hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<a href="score_referee.html" 
+   class="bg-gray-700/80 dark:bg-gray-800/80 p-4 rounded-xl flex items-center justify-between 
+          hover:bg-primary/20 transition-colors">
+  <div class="flex-grow">
+    <p class="font-bold text-lg text-white">Padel Masters 2024</p>
+    <p class="text-sm text-gray-400">July 15-20, 2024 | Madrid, Spain</p>
+  </div>
+  <span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</a>
+
+<a href="score_referee.html" 
+   class="bg-gray-900/80 dark:bg-gray-800/80 p-4 rounded-xl flex items-center justify-between 
+          hover:bg-primary/20 transition-colors mt-3">
+  <div class="flex-grow">
+    <p class="font-bold text-lg text-white">Regional Padel Open</p>
+    <p class="text-sm text-gray-400">August 5-10, 2024 | Barcelona, Spain</p>
+  </div>
+  <span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</a>
+
+<a href="score_referee.html" 
+   class="bg-gray-900/80 dark:bg-gray-800/80 p-4 rounded-xl flex items-center justify-between 
+          hover:bg-primary/20 transition-colors mt-3">
+  <div class="flex-grow">
+    <p class="font-bold text-lg text-white">Amateur Padel Cup</p>
+    <p class="text-sm text-gray-400">September 1-5, 2024 | Valencia, Spain</p>
+  </div>
+  <span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</a>
+
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+    // Simple logic to simulate login
+    const loginButton = document.getElementById('login-button');
+    const logoutButton = document.getElementById('logout-button');
+    const loginSection = document.getElementById('login-section');
+    const tournamentsSection = document.getElementById('tournaments-section');
+    loginButton.addEventListener('click', (e) => {
+      e.preventDefault(); 
+      loginSection.classList.add('hidden');
+      tournamentsSection.classList.remove('hidden');
+    });
+    logoutButton.addEventListener('click', () => {
+      tournamentsSection.classList.add('hidden');
+      loginSection.classList.remove('hidden');
+    });
+  </script>
+
+</body></html>

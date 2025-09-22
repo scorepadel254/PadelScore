@@ -1,0 +1,66 @@
+You are building the backend for the PADELSCORE webapp. 
+The frontend (Admin, Referee, Live) is already ready in /frontend and hosted on GitHub.
+
+TASKS:
+1. Setup a Node.js + Express project inside /backend
+   - Initialize with package.json
+   - Install dependencies: express, cors, dotenv, pg, bcrypt, jsonwebtoken, socket.io
+
+2. Configure PostgreSQL database
+   - Create tables: users (admins + referees), players, teams, tournaments, matches
+   - Add relationships (teams have players, tournaments have matches, matches have referees)
+   - Include a seed script with sample data
+
+3. Create REST API endpoints:
+   - Auth:
+     - POST /api/auth/login  (admin/referee login with JWT)
+   - Players:
+     - GET /api/players
+     - POST /api/players
+   - Teams:
+     - GET /api/teams
+     - POST /api/teams
+   - Tournaments:
+     - GET /api/tournaments
+     - POST /api/tournaments
+   - Matches:
+     - GET /api/matches/:id
+     - POST /api/matches (create new match)
+     - PUT /api/matches/:id/score (update live score)
+   - Leaderboard:
+     - GET /api/leaderboard/:tournamentId
+
+4. Add WebSocket (Socket.IO) for real-time score updates
+   - When referee updates score, push live updates to all connected clients (frontend live pages)
+
+5. Connect backend with frontend
+   - Frontend fetches data from backend APIs
+   - Example:
+     fetch("/api/players") → populates players.html
+     fetch("/api/matches/:id") → shows live score on referee + live page
+   - Ensure CORS is enabled so frontend can talk to backend
+
+6. Add environment variables (.env):
+   - DATABASE_URL (Postgres connection)
+   - JWT_SECRET
+
+7. Add instructions in README.md:
+   - How to run locally (npm run dev)
+   - How to seed database
+   - How to connect frontend with backend
+
+8. Deploy-ready setup:
+   - Use Express app in /backend/src/app.js
+   - Listen on process.env.PORT
+   - Export API routes
+
+Make sure:
+- Code is clean, modular (routes, controllers, models)
+- Database queries use pg (parameterized queries for security)
+- JWT auth middleware for protected routes (admin, referee)
+
+Final Deliverable:
+A working backend that connects to the existing frontend and powers:
+- Admin dashboard (players, tournaments, referees, leaderboard)
+- Referee scoring (login, live score update)
+- Public live view (tournaments, players, leaderboard with live updates)

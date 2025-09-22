@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#38e07b",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#122017",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex min-h-screen">
+<aside class="w-64 shrink-0 bg-background-light dark:bg-background-dark border-r border-slate-200 dark:border-slate-800 hidden lg:flex flex-col">
+<div class="flex items-center gap-2 h-16 px-6 border-b border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-primary text-3xl">
+                sports_tennis
+            </span>
+<h1 class="text-lg font-bold text-slate-900 dark:text-white">PadelScore</h1>
+</div>
+<nav class="flex-1 p-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-semibold" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="tournaments.html">
+<span class="material-symbols-outlined">emoji_events</span>
+<span>Tournaments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="players.html">
+<span class="material-symbols-outlined">groups</span>
+<span>Players</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="leaderboard.html">
+<span class="material-symbols-outlined">leaderboard</span>
+<span>Leaderboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-subtext-light dark:text-subtext-dark hover:bg-gray-100 dark:hover:bg-gray-800" href="referees.html">
+  <span class="material-symbols-outlined">timer</span>
+  <span>Referees</span>
+</a>
+
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="my_profile.html">
+  <span class="material-symbols-outlined">person</span>
+  <span>My Profile</span>
+</a>
+
+
+</a>
+</nav>
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="h-16 flex items-center justify-between px-6 border-b border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<button class="lg:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+
+<div class="flex-1"></div>
+<div class="flex items-center gap-4">
+
+<button>
+<img alt="User profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQY-MCPpymNw24APuiBhRgnX3YPyuIWy5B1K49Yuqz3Cr9BMB2M6Na2h48wRz-STP17otQODe2-KyYKd4CJJTdwzZ_3WEOc1gTxzWg4tbMT2PA2Rtsl3E3yUVkxYB0OKt-EOkl4Y0zbdgNlHHVT3pvHN3Rc9iizlWzaVAM-Qjg77Emsd-nQu6lUzMgSXWMyN76aIbpv7AQhfdpYFRPM5M-dpIoQ3RkPovqZQ3pyH9QyimwJl7IzKZQ3pB2_gjLn_wPhhdiyfFz2RVQ"/>
+</button>
+</div>
+</header>
+<main class="flex-1 p-6 bg-slate-50 dark:bg-black/20">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">Dashboard</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-sm">
+<h3 class="text-sm font-medium text-slate-500 dark:text-slate-400">Active Tournaments</h3>
+<p class="text-3xl font-bold text-slate-900 dark:text-white mt-1">12</p>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-sm">
+<h3 class="text-sm font-medium text-slate-500 dark:text-slate-400">Ongoing Matches</h3>
+<p class="text-3xl font-bold text-slate-900 dark:text-white mt-1">3</p>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-sm">
+<h3 class="text-sm font-medium text-slate-500 dark:text-slate-400">Registered Players</h3>
+<p class="text-3xl font-bold text-slate-900 dark:text-white mt-1">245</p>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-lg shadow-sm">
+<h3 class="text-sm font-medium text-slate-500 dark:text-slate-400">Ranking Updates Today</h3>
+<p class="text-3xl font-bold text-slate-900 dark:text-white mt-1">2</p>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+<div class="xl:col-span-2">
+<div class="bg-background-light dark:bg-background-dark rounded-lg shadow-sm overflow-hidden">
+<h3 class="text-lg font-semibold text-slate-900 dark:text-white p-4 border-b border-slate-200 dark:border-slate-800">Live Matches Console</h3>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left">
+<thead class="bg-slate-50 dark:bg-slate-800/50 text-xs uppercase text-slate-500 dark:text-slate-400">
+<tr>
+<th class="px-6 py-3" scope="col">Match</th>
+<th class="px-6 py-3" scope="col">Tournament</th>
+<th class="px-6 py-3" scope="col">Referee</th>
+<th class="px-6 py-3" scope="col">Status</th>
+<th class="px-6 py-3" scope="col">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-slate-200 dark:border-slate-800">
+<td class="px-6 py-4 font-medium">Team A vs. Team B</td>
+<td class="px-6 py-4">Spring Open</td>
+<td class="px-6 py-4">Emily Carter</td>
+<td class="px-6 py-4"><span class="px-2 py-1 text-xs font-medium rounded-full bg-amber-500/20 text-amber-500">Pending</span></td>
+<td class="px-6 py-4"><a class="font-medium text-primary hover:underline" href="#">View</a></td>
+</tr>
+<tr class="border-b border-slate-200 dark:border-slate-800">
+<td class="px-6 py-4 font-medium">Team C vs. Team D</td>
+<td class="px-6 py-4">Summer Slam</td>
+<td class="px-6 py-4">David Lee</td>
+<td class="px-6 py-4"><span class="px-2 py-1 text-xs font-medium rounded-full bg-emerald-500/20 text-emerald-500">Completed</span></td>
+<td class="px-6 py-4"><a class="font-medium text-primary hover:underline" href="#">View</a></td>
+</tr>
+<tr class="border-b border-slate-200 dark:border-slate-800">
+<td class="px-6 py-4 font-medium">Team E vs. Team F</td>
+<td class="px-6 py-4">Autumn Cup</td>
+<td class="px-6 py-4">Sophia Rodriguez</td>
+<td class="px-6 py-4"><span class="px-2 py-1 text-xs font-medium rounded-full bg-red-500/20 text-red-500">Incident</span></td>
+<td class="px-6 py-4"><a class="font-medium text-primary hover:underline" href="#">View</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="bg-background-light dark:bg-background-dark rounded-lg shadow-sm">
+<h3 class="text-lg font-semibold text-slate-900 dark:text-white p-4 border-b border-slate-200 dark:border-slate-800">Leaderboard Snapshot</h3>
+<ul class="divide-y divide-slate-200 dark:divide-slate-800">
+<li class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<span class="font-bold text-slate-500 dark:text-slate-400">1</span>
+<p class="font-medium">Liam Harper</p>
+</div>
+<p class="font-semibold text-primary">1500 pts</p>
+</li>
+<li class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<span class="font-bold text-slate-500 dark:text-slate-400">2</span>
+<p class="font-medium">Olivia Bennett</p>
+</div>
+<p class="font-semibold text-primary">1450 pts</p>
+</li>
+<li class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<span class="font-bold text-slate-500 dark:text-slate-400">3</span>
+<p class="font-medium">Noah Foster</p>
+</div>
+<p class="font-semibold text-primary">1400 pts</p>
+</li>
+<li class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<span class="font-bold text-slate-500 dark:text-slate-400">4</span>
+<p class="font-medium">Ava Coleman</p>
+</div>
+<p class="font-semibold text-primary">1350 pts</p>
+</li>
+<li class="flex items-center justify-between p-4">
+<div class="flex items-center gap-3">
+<span class="font-bold text-slate-500 dark:text-slate-400">5</span>
+<p class="font-medium">Ethan Hayes</p>
+</div>
+<p class="font-semibold text-primary">1300 pts</p>
+</li>
+</ul>
+</div>
+<div class="bg-background-light dark:bg-background-dark rounded-lg shadow-sm">
+<h3 class="text-lg font-semibold text-slate-900 dark:text-white p-4 border-b border-slate-200 dark:border-slate-800">Recent Incidents</h3>
+<div class="p-4 space-y-4">
+<div class="relative rounded-lg overflow-hidden group">
+<img alt="Padel court" class="w-full h-24 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpBAoUHry-5P4E0vJXkx2WNTJJvJ-XilGRguGD7JKvbGS_0Cg09sBQHJvPACXdXPDjE7-oHydU3jZyfYXMvsiPADHSbA99iNfVXvuYt3htV4HbEkAmtxwnGRt8isa6HxXEbq97tbu-OhHPnAuJ-_XBjnVodvmeFUGozKnpFW0EMJUZVBaGxBBAQwt2NN2sKe2E3cZ2gPCb_zA-N5uCUx3kyJwh2P4A3scu-IiIE27psKZiW_ki1e4NyNnWkggOo5lGjUSlcMVjiXg0"/>
+<div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-3">
+<p class="font-bold text-white text-sm">Match #11223</p>
+<p class="text-xs text-slate-300">Autumn Cup</p>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden group">
+<img alt="Padel court" class="w-full h-24 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxeMBQoR6PfbPCoDOXTVhxK-qpIBz_pzMuIIRjr4s95afy5woJZSJugwuBfgZDYzYjSfPspXH53ihKfzyLgdOAXd3IBV6XMOlE3IK9j-6XCpRqHa4ZphGc6rIyPSu-VyroFqwv2U1Q474R8fHqjh7I8kRScB0AzB7noNJf2jkm6_SNv04aYYXjCVYT9iW-V1ah3EC8uV9zTbO0tv4mxn1OUcRUiJAGATCCEycfDZgcY-dPZVZEkGlTYYk0D_-CuOxMRBDy4u3Cud79"/>
+<div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-3">
+<p class="font-bold text-white text-sm">Match #98765</p>
+<p class="text-xs text-slate-300">Winter Classic</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Player Profile</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#38e07b",
+            "background-light": "#f6f8f7",
+            "background-dark": "#122017",
+          },
+          fontFamily: {
+            "display": ["Lexend"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="min-h-screen">
+<header class="fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-primary/20">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">
+                sports_tennis </span>
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">PadelScore</h1>
+</div>
+<div class="flex items-center gap-2">
+
+</div>
+</header>
+<main class="pt-24 pb-8 container mx-auto px-4">
+<div class="max-w-2xl mx-auto">
+<section class="flex flex-col items-center text-center">
+<div class="relative">
+<div class="w-32 h-32 rounded-full bg-center bg-no-repeat aspect-square bg-cover ring-4 ring-primary/50" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDXAuATxJsnqPMH8jUPWUAsf2iM5BhlwWmYTENUpYYklqaFHFLP_4kQCmZ45E1Jsf74AY4eKm8DK3kujfsOQ2n8_SlRi4dzaxTcPy79-yPayQLZsidHpqBzuJlBfpM6yl1iBOeCEd3xzkxKf4rVCCAWeN0xSdG-92rrlvr-foLoycuYqZaJIqn2qaxU94bJbl5n1gSv7TuOURjvoPeXjxnnTBiGEh6jPzYqq05GhUMCXIeQoh_ZSX_uTmtdBEXm4CMTCIR92cDDiTu");'></div>
+<img alt="Spain Flag" class="absolute bottom-1 right-1 w-8 h-8 rounded-full border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbvfaC5rNLixf25n4Jc1xW9u1cnpvHurHiEO8Uxx0Ru-tVmxtqAdSgSIXb5ToPUkL7u8OB3p7lCVs2ezM1qfo7GCB8U7lKWMC1l5DrY-jUyGlfjEZoUuw9iSoF9SLJ2sucYCmsqERKIkLNzaiKrE_90MbcAVI3KYGvB6myz8J3wv1tWqIohQ3aZn2CuLmM1H53f42-XWnQihSNUTJYTtGmdJehqNzq8x5bCfGB1kftDHczi7Qex8v_OhWAZDuZLJY2iwNlxyIicrRi"/>
+</div>
+<h2 class="mt-4 text-3xl font-bold text-slate-900 dark:text-white">Sophia Rodriguez</h2>
+<div class="mt-2 flex items-center gap-4 text-slate-600 dark:text-slate-400">
+<div class="flex items-center gap-2">
+<span class="font-bold text-primary text-lg">#1</span>
+<span class="text-sm">Rank</span>
+</div>
+<div class="w-px h-6 bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex items-center gap-2">
+<span class="font-bold text-primary text-lg">12,500</span>
+<span class="text-sm">Pts</span>
+</div>
+</div>
+</section>
+<nav class="mt-8 border-b border-slate-200 dark:border-slate-700">
+<div class="flex justify-center -mb-px">
+<a class="px-4 py-3 border-b-2 border-primary text-primary font-bold" href="#">Results</a>
+<a class="px-4 py-3 border-b-2 border-transparent text-slate-500 dark:text-slate-400 hover:text-primary hover:border-primary/50" href="#">Stats</a>
+</div>
+</nav>
+<section class="mt-6">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Recent Tournaments</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-4 bg-white/50 dark:bg-white/5 p-3 rounded-lg shadow-sm">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
+<span class="material-symbols-outlined text-2xl">emoji_events</span>
+</div>
+<div class="flex-grow">
+<p class="font-semibold text-slate-800 dark:text-slate-200">Winner</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Madrid Open</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-sm text-primary">+2000 pts</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white/50 dark:bg-white/5 p-3 rounded-lg shadow-sm">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
+<span class="material-symbols-outlined text-2xl">military_tech</span>
+</div>
+<div class="flex-grow">
+<p class="font-semibold text-slate-800 dark:text-slate-200">Runner-up</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Barcelona Masters</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-sm text-primary">+1200 pts</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white/50 dark:bg-white/5 p-3 rounded-lg shadow-sm">
+<div class="flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-12 text-primary">
+<span class="material-symbols-outlined text-2xl">flag</span>
+</div>
+<div class="flex-grow">
+<p class="font-semibold text-slate-800 dark:text-slate-200">Semi-Finalist</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Valencia Challenge</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-sm text-primary">+720 pts</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-8">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Statistics</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-white/5">
+<p class="text-slate-600 dark:text-slate-400">Win/Loss Ratio</p>
+<p class="text-primary text-4xl font-black">85%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-white/5">
+<p class="text-slate-600 dark:text-slate-400">Matches Played</p>
+<p class="text-primary text-4xl font-black">120</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+
+</body></html>

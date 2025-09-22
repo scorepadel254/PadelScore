@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Referees </title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2ECC71", // Emerald green
+                        "secondary": "#3498DB", // Blue accent
+                        "background-light": "#F7F9FC",
+                        "background-dark": "#1A1C1E",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#242629",
+                        "text-light": "#1A1C1E",
+                        "text-dark": "#E1E3E6",
+                        "border-light": "#E1E3E6",
+                        "border-dark": "#363A3F",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+        .dark .material-symbols-outlined {
+             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 shrink-0 bg-card-light dark:bg-card-dark border-r border-border-light dark:border-border-dark hidden lg:flex flex-col">
+<div class="flex items-center gap-2 h-16 px-6">
+<span class="material-symbols-outlined text-primary text-3xl">
+                sports_tennis
+            </span>
+<h1 class="text-xl font-bold text-text-light dark:text-text-dark">PadelScore</h1>
+</div>
+<nav class="flex-1 p-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="tournaments.html">
+<span class="material-symbols-outlined">emoji_events</span>
+<span>Tournaments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="players.html">
+<span class="material-symbols-outlined">groups</span>
+<span>Players</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-gray-800" href="leaderboard.html">
+<span class="material-symbols-outlined">leaderboard</span>
+<span>Leaderboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-semibold" href="referees.html">
+<span class="material-symbols-outlined">timer</span>
+<span>Referees</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="my_profile.html">
+<span class="material-symbols-outlined">person</span>
+<span>My Profile</span>
+</a>
+
+</a>
+</nav>
+<div class="p-4">
+</div>
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="h-16 flex items-center justify-between px-4 sm:px-6 border-b border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark sticky top-0 z-10">
+<button class="lg:hidden p-2 -ml-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex-1"></div>
+<div class="flex items-center gap-4">
+
+<button>
+<img alt="User profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQY-MCPpymNw24APuiBhRgnX3YPyuIWy5B1K49Yuqz3Cr9BMB2M6Na2h48wRz-STP17otQODe2-KyYKd4CJJTdwzZ_3WEOc1gTxzWg4tbMT2PA2Rtsl3E3yUVkxYB0OKt-EOkl4Y0zbdgNlHHVT3pvHN3Rc9iizlWzaVAM-Qjg77Emsd-nQu6lUzMgSXWMyN76aIbpv7AQhfdpYFRPM5M-dpIoQ3RkPovqZQ3pyH9QyimwJl7IzKZQ3pB2_gjLn_wPhhdiyfFz2RVQ"/>
+</button>
+</div>
+</header>
+<main class="flex-1 p-4 sm:p-6">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+<h2 class="text-2xl sm:text-3xl font-bold text-text-light dark:text-text-dark">Referees </h2>
+<a href="new_referee.html"
+class="flex items-center justify-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors shadow-soft">
+
+<span>Add New Referee</span>
+</a>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-soft overflow-hidden">
+<div class="p-4 border-b border-border-light dark:border-border-dark">
+<input class="w-full bg-background-light dark:bg-background-dark border-border-light dark:border-border-dark rounded-lg focus:ring-secondary focus:border-secondary" placeholder="Search users by name, email or role..." type="text"/>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-slate-500 dark:text-slate-400">
+<thead class="text-xs text-slate-700 dark:text-slate-300 uppercase bg-slate-50 dark:bg-slate-800">
+<tr>
+<th class="px-6 py-3" scope="col">Name</th>
+<th class="px-6 py-3 hidden md:table-cell" scope="col">Contact</th>
+<th class="px-6 py-3" scope="col">Role</th>
+<th class="px-6 py-3 hidden sm:table-cell" scope="col">Status</th>
+<th class="px-6 py-3 text-right" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-card-light dark:bg-card-dark border-b border-border-light dark:border-border-dark hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<td class="px-6 py-4 font-medium text-text-light dark:text-text-dark whitespace-nowrap">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHwoc2VH9zbTebhTlTANtI10RN1hIYqWPretrLcgFyn1WtyodOgEt2TMnYPYiKCkVCUMS09eaP46wm-HHwC5bYOn3U-bDykjU1kNglyL8ZG9iYmb4AKJkNxgLqExlhbs8-8HvmGyBkiGgtzEAPDuD2NhBNxtXTZz046OriN3MwNwHIO9F8SyWORoYlIVIdrB5fguqU1GTg-Cb56u3OC94OwKXHWs6IALjZxMjcMGoCNZJziE_iV4vzVBYcgtKkqDMo96JEwIDN3z0p"/>
+<div>
+<div class="font-semibold">John Doe</div>
+<div class="font-normal text-slate-500 md:hidden">john.doe@example.com</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 hidden md:table-cell">
+                                        john.doe@example.com
+                                    </td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-secondary/10 text-secondary">Referee</span>
+</td>
+<td class="px-6 py-4 hidden sm:table-cell">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-green-500/20 text-green-500">Active</span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">history</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">delete</span></button>
+</td>
+</tr>
+<tr class="bg-card-light dark:bg-card-dark border-b border-border-light dark:border-border-dark hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<td class="px-6 py-4 font-medium text-text-light dark:text-text-dark whitespace-nowrap">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG0Z04ypRu87EIylwRvz_sqvp4eEtNt0LXDlrbPW_bfyE0cHdgZr5LtN00KaMSpo5rsYJ6Rh4yFoO7uLPRfqFS1SkRL29LdIdzy3jfprLY12iQcBtxTivxuPHbz_VVAkzmLmft1Ud4lJJM0qdD1thtF34_mqzy_l9vz0txPp_e6-1wnVoLgvQRT-Md39ok6XQ9oLXuXuCy0KTvMAgfxExbbNhho5o6rCyo49_8sKn1PipAfmejcogiM8XX88tKVk2rz7M0Tg-qCRSg"/>
+<div>
+<div class="font-semibold">Jane Smith</div>
+<div class="font-normal text-slate-500 md:hidden">jane.smith@example.com</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 hidden md:table-cell">
+                                        jane.smith@example.com
+                                    </td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-purple-500/10 text-purple-500">Administrator</span>
+</td>
+<td class="px-6 py-4 hidden sm:table-cell">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-green-500/20 text-green-500">Active</span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">history</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">delete</span></button>
+</td>
+</tr>
+<tr class="bg-card-light dark:bg-card-dark border-b border-border-light dark:border-border-dark hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<td class="px-6 py-4 font-medium text-text-light dark:text-text-dark whitespace-nowrap">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH6-lWsF5XjKYPVUMQGcipOIP_utdLtvAdK6DZYK3RKVNAogabCihgjsbzLc2oH6hIgIybtTp_-G-voMtaMjUyQnRgRI9VfdTLIAa20sybH-njUCQWl3WZLi1smxuXQIqA5oxCiiQnw4VZn_5QdkMoC4mySoZH_6kukZMb-xAQAkiqSSMsWbmDp31YN5VYy1PnbnqegHE2K80zXQPZ8uld_TA0DmwDYpm5e5miyZF5B2yiiBCypMMywY68JN7d8QzcUigG5SN4-x9L"/>
+<div>
+<div class="font-semibold">Michael Johnson</div>
+<div class="font-normal text-slate-500 md:hidden">michael.j@example.com</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 hidden md:table-cell">
+                                        michael.j@example.com
+                                    </td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-blue-500/10 text-blue-500">User</span>
+</td>
+<td class="px-6 py-4 hidden sm:table-cell">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-yellow-500/20 text-yellow-500">Pending</span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">history</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">delete</span></button>
+</td>
+</tr>
+<tr class="bg-card-light dark:bg-card-dark border-b border-border-light dark:border-border-dark hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<td class="px-6 py-4 font-medium text-text-light dark:text-text-dark whitespace-nowrap">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_Y6gJfj8Hnl7CbC9BwaF6RP9ZHbMpScx0pG-TJpJGtALWDBMRVHtez0JQt2O87X20Tt1FJ0WwLI_ouMGGsi6A9k78XfIWQ97f8vlJ0x8Ymeq-_a7Tqk25uCXP6xb2tY-669BOCxW43g07ZZVWqNJtkKFRHQXYjIsjxgL6BH2dULcdopmg8GkwZRjrjPJQjGnhcGTMg_0iJEPKTuSD6Yf15TRDbZROmvjxNPi9UZUUyF9Y3lB4qdaJwbgR2AcjA-87CuZTFx3o7e9r"/>
+<div>
+<div class="font-semibold">Emily Davis</div>
+<div class="font-normal text-slate-500 md:hidden">emily.davis@example.com</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 hidden md:table-cell">
+                                        emily.davis@example.com
+                                    </td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-secondary/10 text-secondary">Referee</span>
+</td>
+<td class="px-6 py-4 hidden sm:table-cell">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-red-500/20 text-red-500">Suspended</span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">history</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">delete</span></button>
+</td>
+</tr>
+<tr class="bg-card-light dark:bg-card-dark hover:bg-slate-50 dark:hover:bg-slate-800/50">
+<td class="px-6 py-4 font-medium text-text-light dark:text-text-dark whitespace-nowrap">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJv-V8lS1G3lY1UVcMLzUPPS_OKvOaEvbuK2H1gYcQpXwHBAcMXYkyrvZUZXUqw-WiIvCFZh9hJ2dwM28iwRaQi3ZohXuUENykAnZLTglp7qRSJMDBF24gAA80EmJ8XAYy4-zKe0bw54mm_Z_PnrSK9cADkOXaERqZUuxLm71MMsSJuY0MQTZJQtEUaf2FJYLQxxYv3_epExhfUEWdGRyghz4t19JeDAqHKPVASEvOLmB2zfXNYKaF3npzKOZea4sTJfv0CZkzD86j"/>
+<div>
+<div class="font-semibold">Chris Wilson</div>
+<div class="font-normal text-slate-500 md:hidden">chris.w@example.com</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 hidden md:table-cell">
+                                        chris.w@example.com
+                                    </td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-secondary/10 text-secondary">Referee</span>
+</td>
+<td class="px-6 py-4 hidden sm:table-cell">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-green-500/20 text-green-500">Active</span>
+</td>
+<td class="px-6 py-4 text-right space-x-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">history</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400"><span class="material-symbols-outlined text-base">delete</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-border-light dark:border-border-dark flex items-center justify-between">
+<span class="text-sm text-slate-500 dark:text-slate-400">Showing 1 to 5 of 20 results</span>
+<div class="inline-flex rounded-lg shadow-soft overflow-hidden">
+<button class="px-3 py-1 bg-card-light dark:bg-card-dark text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-medium">Previous</button>
+<button class="px-3 py-1 bg-card-light dark:bg-card-dark text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-medium border-l border-border-light dark:border-border-dark">Next</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

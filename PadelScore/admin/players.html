@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Players &amp; Teams</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2ECC71", // Emerald green
+                        "secondary": "#3498DB", // Blue accent
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#121212",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#1E1E1E",
+                        "text-light": "#111827",
+                        "text-dark": "#E5E7EB",
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#374151",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #4A5568;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #718096;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 shrink-0 bg-card-light dark:bg-card-dark border-r border-border-light dark:border-border-dark hidden lg:flex flex-col transition-all duration-300">
+<div class="flex items-center gap-2 h-16 px-6">
+<span class="material-symbols-outlined text-primary text-3xl">
+                sports_tennis
+            </span>
+<h1 class="text-xl font-bold text-text-light dark:text-text-dark">PadelScore</h1>
+</div>
+<nav class="flex-1 p-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2" href="index.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex gap-3 px-4 py-2 " href="tournaments.html">
+  <span class="material-symbols-outlined">emoji_events</span>
+<span>Tournaments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-semibold" href="players.html">
+<span class="material-symbols-outlined">groups</span>
+<span>Players</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="leaderboard.html">
+<span class="material-symbols-outlined">leaderboard</span>
+<span>Leaderboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="referees.html">
+<span class="material-symbols-outlined">timer</span>
+<span>Referees</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800/50" href="my_profile.html">
+<span class="material-symbols-outlined">person</span>
+<span>My Profile</span>
+</a>
+
+</a>
+</nav>
+<div class="p-4 border-t border-border-light dark:border-border-dark">
+
+</div>
+</aside>
+<div class="flex-1 flex flex-col">
+<header class="h-16 flex items-center justify-between px-4 sm:px-6 border-b border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark sticky top-0 z-20">
+<button class="lg:hidden text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex-1"></div>
+<div class="flex items-center gap-4">
+
+</button>
+
+<button>
+<img alt="User profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQY-MCPpymNw24APuiBhRgnX3YPyuIWy5B1K49Yuqz3Cr9BMB2M6Na2h48wRz-STP17otQODe2-KyYKd4CJJTdwzZ_3WEOc1gTxzWg4tbMT2PA2Rtsl3E3yUVkxYB0OKt-EOkl4Y0zbdgNlHHVT3pvHN3Rc9iizlWzaVAM-Qjg77Emsd-nQu6lUzMgSXWMyN76aIbpv7AQhfdpYFRPM5M-dpIoQ3RkPovqZQ3pyH9QyimwJl7IzKZQ3pB2_gjLn_wPhhdiyfFz2RVQ"/>
+</button>
+</div>
+</header>
+<main class="flex-1 p-4 sm:p-6 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto">
+<div class="mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<h2 class="text-3xl font-bold text-text-light dark:text-text-dark">Players &amp; Teams</h2>
+<div class="flex items-center gap-2">
+<a href="add_team.html"
+class="flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary text-white hover:bg-blue-600 transition-colors shadow-soft">
+
+<span>Add Team</span>
+</a>
+<a href="add_player.html"
+class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white hover:bg-emerald-600 transition-colors shadow-soft">
+
+<span>Add Player</span>
+</a>
+</div>
+</div>
+<div class="mb-6 bg-card-light dark:bg-card-dark p-4 rounded-lg shadow-soft">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="relative">
+
+<input class="w-full pl-10 pr-4 py-2 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark rounded-lg focus:ring-primary focus:border-primary" placeholder="Search by name, email..." type="text"/>
+</div>
+<div>
+<select class="w-full py-2 px-3 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark rounded-lg focus:ring-primary focus:border-primary">
+<option>All Tournaments</option>
+<option>Spring Open</option>
+<option>Summer Slam</option>
+<option>Autumn Cup</option>
+</select>
+</div>
+<div>
+<select class="w-full py-2 px-3 border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark rounded-lg focus:ring-primary focus:border-primary">
+<option>Sort by Name (A-Z)</option>
+<option>Sort by Name (Z-A)</option>
+<option>Sort by Registration Date</option>
+</select>
+</div>
+<a class="w-full sm:w-auto px-4 py-2 rounded-lg bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
+                            Apply Filters
+</a>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-lg shadow-soft overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-text-light dark:text-text-dark">
+<thead class="bg-slate-50 dark:bg-slate-800/50 text-xs uppercase text-slate-500 dark:text-slate-400">
+<tr>
+<th class="px-6 py-3" scope="col">Name</th>
+<th class="px-6 py-3" scope="col">Contact</th>
+<th class="px-6 py-3" scope="col">Type</th>
+<th class="px-6 py-3" scope="col">Associated Tournaments</th>
+<th class="px-6 py-3" scope="col">Status</th>
+<th class="px-6 py-3" scope="col"><span class="sr-only">Actions</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-light dark:border-border-dark hover:bg-slate-50 dark:hover:bg-slate-800/20">
+<td class="px-6 py-4 font-medium flex items-center gap-3">
+<img alt="Alex Johnson" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnUa3wEefB_w0BwI93L2p2pEZlBKmTvcxxnBJSij6Mol4S3kgSE5H5syORwl4nD71axq6MDUTh-LF2cQvCtF91VCYndxLeUCXpn1Ks1iUFbOdaPqCZeqJwWqbfeB97oUjFfcMHPIR5-hY8bqz8PAzbZM8X-y9Z0tClfjQ3pW4FNwQxJLFSzoGoml3BvjSLBqMQtZqB-qlVS_c9duMXumV5DOBdbqkSHEP-rrIwPgAsy6ex8syqsrNzwy4EyJq762ZehDw6ff0Mutaw"/>
+<div>
+<div class="font-semibold text-text-light dark:text-text-dark">Alex Johnson</div>
+<div class="text-xs text-slate-500">Player</div>
+</div>
+</td>
+<td class="px-6 py-4">alex.j@example.com</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-secondary dark:bg-blue-900/50 dark:text-blue-300">Player</span>
+</td>
+<td class="px-6 py-4">3</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/50 dark:text-emerald-300">Active</span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base">visibility</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base text-red-500">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark hover:bg-slate-50 dark:hover:bg-slate-800/20">
+<td class="px-6 py-4 font-medium flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white font-bold text-lg">P</div>
+<div>
+<div class="font-semibold text-text-light dark:text-text-dark">Padel Pros</div>
+<div class="text-xs text-slate-500">Team</div>
+</div>
+</td>
+<td class="px-6 py-4">contact@padelpros.com</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-300">Team</span>
+</td>
+<td class="px-6 py-4">5</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-emerald-100 text-emerald-600 dark:bg-emerald-900/50 dark:text-emerald-300">Active</span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base">visibility</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base text-red-500">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark hover:bg-slate-50 dark:hover:bg-slate-800/20">
+<td class="px-6 py-4 font-medium flex items-center gap-3">
+<img alt="Maria Garcia" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtIa8-APbxVrR_V4842g4ot56IONCfDfWaazuED3xzaFC0NbwPsrBE6tfAPYV5Y61UzQq4atbKhz1I0eHCuP6IxiDvfQXNP0JwCdQnuy38fjkXX4NFBuQlsYTzSKDsqSQ0v2KBlDxrrb2TBC5tWFKhVVzCKFyl_aEOzHdh6p2k9AjMiyCJSr7CNgRDEapPkVFA_XXOIsWW-OLGajC-OLThSCiV9kxHCqdODrJKPe1SrsEdUS1jo6desE-ZQHVvaTUychgTPhbPDdiG"/>
+<div>
+<div class="font-semibold text-text-light dark:text-text-dark">Maria Garcia</div>
+<div class="text-xs text-slate-500">Player</div>
+</div>
+</td>
+<td class="px-6 py-4">maria.g@example.com</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-secondary dark:bg-blue-900/50 dark:text-blue-300">Player</span>
+</td>
+<td class="px-6 py-4">2</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-amber-100 text-amber-600 dark:bg-amber-900/50 dark:text-amber-300">Pending</span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base">visibility</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base text-red-500">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark hover:bg-slate-50 dark:hover:bg-slate-800/20">
+<td class="px-6 py-4 font-medium flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg">S</div>
+<div>
+<div class="font-semibold text-text-light dark:text-text-dark">Smashers</div>
+<div class="text-xs text-slate-500">Team</div>
+</div>
+</td>
+<td class="px-6 py-4">smashers@team.net</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-300">Team</span>
+</td>
+<td class="px-6 py-4">1</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 text-xs font-medium rounded-full bg-red-100 text-red-600 dark:bg-red-900/50 dark:text-red-300">Suspended</span>
+</td>
+<td class="px-6 py-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base">visibility</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base">edit</span></button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"><span class="material-symbols-outlined text-base text-red-500">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between p-4 border-t border-border-light dark:border-border-dark">
+<span class="text-sm text-slate-500 dark:text-slate-400">Showing 1 to 4 of 256 entries</span>
+<div class="inline-flex items-center -space-x-px">
+<button class="px-3 py-2 leading-tight text-slate-500 bg-white dark:bg-card-dark border border-border-light dark:border-border-dark rounded-l-lg hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-white">Previous</button>
+<button class="px-3 py-2 leading-tight text-primary bg-primary/10 dark:bg-primary/20 border border-primary hover:bg-primary/20">1</button>
+<button class="px-3 py-2 leading-tight text-slate-500 bg-white dark:bg-card-dark border border-border-light dark:border-border-dark hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-white">2</button>
+<button class="px-3 py-2 leading-tight text-slate-500 bg-white dark:bg-card-dark border border-border-light dark:border-border-dark hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-white">3</button>
+<button class="px-3 py-2 leading-tight text-slate-500 bg-white dark:bg-card-dark border border-border-light dark:border-border-dark rounded-r-lg hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-700 dark:hover:text-white">Next</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlEl = document.documentElement;
+    themeToggle.addEventListener('click', () => {
+        htmlEl.classList.toggle('dark');
+    });
+</script>
+
+</body></html>
